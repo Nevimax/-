@@ -33,7 +33,6 @@
             android:gravity="center_vertical"
             android:text="@string/DataStr"
             android:layout_alignParentRight="true"
-            android:textColor="#fff"
             android:textSize="20sp"/>
     </RelativeLayout>
 </LinearLayout>
