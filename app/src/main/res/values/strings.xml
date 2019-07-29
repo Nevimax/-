@@ -11,5 +11,8 @@
     <string name="temperature">Temperature: </string>
     <string name="sunrise">Sunrise: </string>
     <string name="sunset">Sunset: </string>
+    <string name="dialogDelete">Удалить</string>
+    <string name="dialogUpdate">Изменить</string>
+    <string name="dialogName">Иia</string>
 
 </resources>
