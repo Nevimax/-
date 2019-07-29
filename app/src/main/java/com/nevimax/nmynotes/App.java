@@ -2,6 +2,7 @@ package com.nevimax.nmynotes;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import androidx.room.Room;
 
@@ -16,6 +17,7 @@ public class App extends Application {
                     .allowMainThreadQueries()//разрешаем делать запросы к бд
                     .build();
         return instance;
+
     }
 
 

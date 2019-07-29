@@ -2,6 +2,7 @@ package com.nevimax.nmynotes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -21,6 +22,16 @@ public class NoteActivity extends AppCompatActivity {
     TextView time, date;
     EditText zag, text;
     ImageButton plus;
+    private AppDatabase appDatabase;
+    private EmployeeDao notesDao;
+    Employee employee;
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+//        appDatabase.employeeDao().update(employee);
+        Log.d("QWE","OnStop");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,23 +51,26 @@ public class NoteActivity extends AppCompatActivity {
         text = findViewById(R.id.textEd);
         date = findViewById(R.id.dateTimeView);
         plus = findViewById(R.id.saveButton);
-        final AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "NotesDatabase.db")
-                .allowMainThreadQueries()//разрешаем делать запросы к бд
-                .fallbackToDestructiveMigration() // чистка базы на обновляшку базы
-                .build();
+
+        appDatabase = App.getInstance(this);
 
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String zagSt = zag.getText().toString();
                 String textSt = text.getText().toString();
                 String dateSt = date.getText().toString();
-                Employee employee = new Employee(zagSt,textSt,dateSt);
-                db.employeeDao().insert(employee);
+
+                employee = new Employee(zagSt, textSt, dateSt);
+                appDatabase.employeeDao().insert(employee);
+                Log.d("QWE", "insert");
                 finish();
 
             }
         });
+
+
     }
 
 }
