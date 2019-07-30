@@ -1,5 +1,6 @@
 package com.nevimax.nmynotes.Recycler;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import java.util.List;
 public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 
     private List<Employee> noteModels;
+
 
     public NoteRecyclerAdapter(List<Employee> noteModels) {
         this.noteModels = noteModels;
@@ -41,10 +43,14 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteViewHolder> {
         viewHolder.tvName.setText(noteModels.get(position).getZagol());
         viewHolder.tvTime.setText(noteModels.get(position).getDate());
         viewHolder.tvText.setText(noteModels.get(position).getText());
+
+
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("NLog", "OnClickAdapter");
+//                Intent intent = new Intent(Ma);
+//                startActivity(intent);
             }
         });
         viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {

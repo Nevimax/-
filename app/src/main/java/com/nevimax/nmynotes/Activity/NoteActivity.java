@@ -36,15 +36,7 @@ public class NoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_activity);
-        //time
-        Date time1 = new Date();
-        DateFormat timeFormat = new SimpleDateFormat("HH.mm ");
-        String timeText = timeFormat.format(time1);
-        //date
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        String dateText = dateFormat.format(time1);
-        time = findViewById(R.id.dateTimeView);
-        time.setText(timeText + "|| " + dateText);
+        time();
 
         zag = findViewById(R.id.zagolEd);
         text = findViewById(R.id.textEd);
@@ -56,7 +48,6 @@ public class NoteActivity extends AppCompatActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String zagSt = zag.getText().toString();
                 String textSt = text.getText().toString();
                 String dateSt = date.getText().toString();
@@ -70,6 +61,17 @@ public class NoteActivity extends AppCompatActivity {
         });
 
 
+    }
+    public void time(){
+        //time
+        Date time1 = new Date();
+        DateFormat timeFormat = new SimpleDateFormat("HH.mm ");
+        String timeText = timeFormat.format(time1);
+        //date
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        String dateText = dateFormat.format(time1);
+        time = findViewById(R.id.dateTimeView);
+        time.setText(timeText + "|| " + dateText);
     }
 
 }
