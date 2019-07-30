@@ -1,4 +1,4 @@
-package com.nevimax.nmynotes;
+package com.nevimax.nmynotes.Activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.nevimax.nmynotes.R;
 import com.nevimax.nmynotes.Weather.Weather;
 import com.nevimax.nmynotes.Weather.WeatherRestAdapter;
 

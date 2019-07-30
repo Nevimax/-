@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorLayout"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="25dp"

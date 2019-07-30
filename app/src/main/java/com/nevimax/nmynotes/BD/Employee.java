@@ -1,4 +1,4 @@
-package com.nevimax.nmynotes;
+package com.nevimax.nmynotes.BD;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Employee {
+
 
     @PrimaryKey(autoGenerate = true) //сам генерирует айди
     int id;
