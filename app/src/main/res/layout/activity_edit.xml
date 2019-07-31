@@ -13,16 +13,16 @@
 
 
     <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="30dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="30dp"-->
 
-        <!--android:background="#0288D1"-->
-   <!---->
-        <!--tools:layout_editor_absoluteY="175dp" />-->
+    <!--android:background="#0288D1"-->
+    <!---->
+    <!--tools:layout_editor_absoluteY="175dp" />-->
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutfrag"
         android:layout_width="match_parent"
         android:layout_height="630dp"
         android:layout_marginTop="8dp"
@@ -32,14 +32,14 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <EditText
-            android:id="@+id/zagolEd"
+            android:id="@+id/zagolEdfrag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colortext"
             android:gravity="center_vertical"
             android:hint="@string/zagolo"
             android:textSize="40dp"
-            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteX="dp"
             tools:layout_editor_absoluteY="68dp" />
 
 
@@ -54,7 +54,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/textEd"
+                    android:id="@+id/textEdfrag"
                     android:layout_width="match_parent"
                     android:layout_height="449dp"
                     android:layout_marginTop="8dp"
@@ -71,14 +71,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout2frag"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/colorBar"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/nameView"
+            android:id="@+id/nameViewfrag"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="14"
@@ -88,7 +88,7 @@
             android:textSize="30dp" />
 
         <TextView
-            android:id="@+id/dateTimeView"
+            android:id="@+id/dateTimeViewfrag"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="6"
@@ -96,7 +96,7 @@
             android:textColor="@color/colorblack"
             android:hint="time/date" />
         <ImageButton
-            android:id="@+id/saveButton"
+            android:id="@+id/saveButtonfrag"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -106,5 +106,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_save" />
+        <ImageButton
+            android:id="@+id/deleteButtonfrag"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/colorBar"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

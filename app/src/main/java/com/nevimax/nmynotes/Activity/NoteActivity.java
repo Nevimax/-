@@ -53,6 +53,7 @@ public class NoteActivity extends AppCompatActivity {
                 String dateSt = date.getText().toString();
 
                 employee = new Employee(zagSt, textSt, dateSt);
+//                if(zagSt.equals(null)){}
                 appDatabase.employeeDao().insert(employee);
                 Log.d("NLog", "insert");
                 finish();

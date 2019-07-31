@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nevimax.nmynotes.BD.Employee;
+import com.nevimax.nmynotes.Activity.EditActivity;
 import com.nevimax.nmynotes.R;
 
 import java.util.List;
@@ -18,10 +19,12 @@ import java.util.List;
 public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 
     private List<Employee> noteModels;
+    String id;
 
 
     public NoteRecyclerAdapter(List<Employee> noteModels) {
         this.noteModels = noteModels;
+
     }
 
     @NonNull
@@ -37,26 +40,35 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final NoteViewHolder holder, int position) {
-        final NoteViewHolder viewHolder = holder;
+    public void onBindViewHolder(@NonNull final NoteViewHolder holder, final int position) {
+       final NoteViewHolder viewHolder = holder;
         Log.d("Nholder", "onBindViewHolder");
         viewHolder.tvName.setText(noteModels.get(position).getZagol());
         viewHolder.tvTime.setText(noteModels.get(position).getDate());
         viewHolder.tvText.setText(noteModels.get(position).getText());
-
+        int i = position;
+        id = ""+i;
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("NLog", "OnClickAdapter");
-//                Intent intent = new Intent(Ma);
-//                startActivity(intent);
+//                Toast.makeText(mcontext,"Привет",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(), EditActivity.class);
+                intent.putExtra("Name",noteModels.get(position).getZagol());
+                intent.putExtra("Time",noteModels.get(position).getDate());
+                intent.putExtra("Text",noteModels.get(position).getText());
+                intent.putExtra("id",id);
+                view.getContext().startActivity(intent);
+
+
             }
         });
         viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 Log.d("NLog", "OnLongClickAdapter");
+
                 return true;
             }
         });
