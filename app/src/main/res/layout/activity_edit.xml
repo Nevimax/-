@@ -47,12 +47,12 @@
                 <EditText
                     android:id="@+id/textEdfrag"
                     android:layout_width="match_parent"
-                    android:layout_height="602dp"
+                    android:layout_height="449dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/colortext"
                     android:gravity="left"
-                    android:hint="@string/text"
                     android:textColor="@color/colorblack"
+                    android:hint="@string/text"
                     android:textSize="20dp"
                     app:layout_constraintTop_toBottomOf="@+id/textView"
                     tools:layout_editor_absoluteY="110dp" />
