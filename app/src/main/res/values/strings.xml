@@ -4,15 +4,15 @@
     <string name="text">Заметки</string>
     <string name="NoteStr">Заметка</string>
     <string name="DataStr">Время и дата</string>
-    <string name="city">City: </string>
-    <string name="country">Country: </string>
-    <string name="coordinates">Coordinates: </string>
+    <string name="city">Город: </string>
+    <string name="country">Страна: </string>
+    <string name="coordinates">Координаты: </string>
     <string name="cod">COD: </string>
-    <string name="temperature">Temperature: </string>
-    <string name="sunrise">Sunrise: </string>
-    <string name="sunset">Sunset: </string>
+    <string name="temperature">Температура: </string>
+    <string name="sunrise">Восход солнца: </string>
+    <string name="sunset">Заход солнца: </string>
     <string name="dialogDelete">Удалить</string>
     <string name="dialogUpdate">Изменить</string>
-    <string name="dialogName">Иia</string>
+    <string name="dialogName"></string>
 
 </resources>

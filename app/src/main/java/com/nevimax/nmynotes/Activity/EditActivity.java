@@ -48,14 +48,10 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.deleteButtonfrag:
-                emp();
-                appDatabase.employeeDao().getById(i);
-//                appDatabase.employeeDao().delete(employee);
                 finish();
                 break;
             case R.id.saveButtonfrag:
                 emp();
-                appDatabase.employeeDao().insert(employee);
                 finish();
                 break;
         }

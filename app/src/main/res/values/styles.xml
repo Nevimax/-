@@ -11,4 +11,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="ThemeAllYellow">
+        <item name="color">@color/colorBar</item>
+        <item name="android:colorBackground">@color/colorblack</item>
+        <item name="android:textColorTertiary">@color/colorLayout</item>
+        <item name="android:colorPrimary">@color/colortext</item>
+    </style>
 </resources>

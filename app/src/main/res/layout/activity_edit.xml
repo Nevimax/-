@@ -11,16 +11,6 @@
         android:id="@+id/include"
         layout="@layout/toolbar_main" />
 
-
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="30dp"-->
-
-    <!--android:background="#0288D1"-->
-    <!---->
-    <!--tools:layout_editor_absoluteY="175dp" />-->
-
-
     <LinearLayout
         android:id="@+id/linearLayoutfrag"
         android:layout_width="match_parent"
@@ -37,6 +27,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colortext"
             android:gravity="center_vertical"
+            android:textColor="@color/colorblack"
             android:hint="@string/zagolo"
             android:textSize="40dp"
             tools:layout_editor_absoluteX="dp"
@@ -56,11 +47,12 @@
                 <EditText
                     android:id="@+id/textEdfrag"
                     android:layout_width="match_parent"
-                    android:layout_height="449dp"
+                    android:layout_height="602dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/colortext"
                     android:gravity="left"
                     android:hint="@string/text"
+                    android:textColor="@color/colorblack"
                     android:textSize="20dp"
                     app:layout_constraintTop_toBottomOf="@+id/textView"
                     tools:layout_editor_absoluteY="110dp" />
@@ -81,6 +73,7 @@
             android:id="@+id/nameViewfrag"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:textColor="@color/colorblack"
             android:layout_weight="14"
             android:background="@color/colorBar"
             android:gravity="center_vertical"

@@ -6,8 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
-    <include layout="@layout/content_main" />
     <include layout="@layout/toolbar_main" />
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/colortext"/>
+    <include layout="@layout/content_main" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +28,7 @@
             android:background="@color/colorBar"
             android:gravity="center_vertical"
             android:text="  NMyNotes"
+            android:textColor="@color/colorblack"
             android:onClick="onClick"
             android:textSize="30dp"
 
