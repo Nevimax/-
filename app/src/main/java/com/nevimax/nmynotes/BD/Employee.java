@@ -65,7 +65,7 @@ public class Employee {
     @NonNull
     @Override
     public String toString() {
-        return String.valueOf(id)+" "+zagol+" "+text+" "+date;
+        return String.valueOf(id);
     }
 
 }

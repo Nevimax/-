@@ -46,8 +46,6 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteViewHolder> {
         viewHolder.tvName.setText(noteModels.get(position).getZagol());
         viewHolder.tvTime.setText(noteModels.get(position).getDate());
         viewHolder.tvText.setText(noteModels.get(position).getText());
-        int i = position;
-        id = ""+i;
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +56,7 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteViewHolder> {
                 intent.putExtra("Name",noteModels.get(position).getZagol());
                 intent.putExtra("Time",noteModels.get(position).getDate());
                 intent.putExtra("Text",noteModels.get(position).getText());
-                intent.putExtra("id",id);
+                intent.putExtra("id",noteModels.get(position).toString());
                 view.getContext().startActivity(intent);
 
 
