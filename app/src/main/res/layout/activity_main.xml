@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:background="@color/colortext"/>
+
     <include layout="@layout/content_main" />
 
     <LinearLayout
@@ -24,19 +25,17 @@
             android:id="@+id/nameView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="20"
+            android:layout_weight="3"
             android:background="@color/colorBar"
             android:gravity="center_vertical"
             android:text="  NMyNotes"
             android:textColor="@color/colorblack"
             android:onClick="onClick"
             android:textSize="30dp"
-
             />
 
         <ImageButton
             android:id="@+id/buttonAdd"
-
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -46,5 +45,10 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_add" />
     </LinearLayout>
-
+    <TextView
+        android:layout_width="20dp"
+        android:onClick="onClick"
+        android:background="@color/colorBar"
+        android:layout_height="20dp"
+        android:id="@+id/weath"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

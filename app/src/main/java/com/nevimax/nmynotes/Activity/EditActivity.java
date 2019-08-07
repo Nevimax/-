@@ -23,7 +23,7 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
     EditText zagEd, textEd;
     TextView timeEd;
     String zag, text, time;
-    int i =0;
+    int i = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,14 +54,18 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.deleteButtonfrag:
                 emp();
                 appDatabase.employeeDao().delete(employee);
-                Toast.makeText(getApplicationContext(),"Удалено", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Удалено", Toast.LENGTH_SHORT).show();
                 finish();
                 break;
             case R.id.saveButtonfrag:
                 emp();
-                appDatabase.employeeDao().update(employee);
-                Toast.makeText(getApplicationContext(),"Сохранено", Toast.LENGTH_SHORT).show();
-                finish();
+                if (zag.equals(" ")||zag.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Ввидите название", Toast.LENGTH_SHORT).show();
+                } else {
+                    appDatabase.employeeDao().update(employee);
+                    Toast.makeText(getApplicationContext(), "Сохранено", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
                 break;
         }
     }

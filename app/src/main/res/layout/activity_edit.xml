@@ -28,6 +28,7 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:background="@color/colortext"
+            android:maxLength="15"
             android:gravity="top"
             android:hint="@string/zagolo"
             android:textColor="@color/colorblack"

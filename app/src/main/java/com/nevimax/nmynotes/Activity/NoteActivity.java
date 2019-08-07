@@ -59,9 +59,12 @@ public class NoteActivity extends AppCompatActivity {
 //                if(zagSt.equals(null)){}
                 appDatabase.employeeDao().insert(employee);
                 Log.d("NLog", "insert");
-                Toast.makeText(getApplicationContext(),"Добавлено", Toast.LENGTH_SHORT).show();
-                finish();
-
+                if (zagSt.equals(" ")||zagSt.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Ввидите название", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Добавлено", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
 
             }
         });
