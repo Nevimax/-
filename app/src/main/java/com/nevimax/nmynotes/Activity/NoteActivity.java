@@ -1,11 +1,13 @@
 package com.nevimax.nmynotes.Activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +26,7 @@ public class NoteActivity extends AppCompatActivity {
     ImageButton plus;
     private AppDatabase appDatabase;
     Employee employee;
+    Context mcontext;
 
     @Override
     protected void onPause() {
@@ -56,7 +59,9 @@ public class NoteActivity extends AppCompatActivity {
 //                if(zagSt.equals(null)){}
                 appDatabase.employeeDao().insert(employee);
                 Log.d("NLog", "insert");
+                Toast.makeText(getApplicationContext(),"Добавлено", Toast.LENGTH_SHORT).show();
                 finish();
+
 
             }
         });

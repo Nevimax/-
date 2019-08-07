@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="expandWeatherSync"
+            android:background="@color/colorBar"
             android:textColor="@color/appButtonTextColor"
             android:text="Look Up Sync" />
 
@@ -35,6 +36,7 @@
             android:id="@+id/button2"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
+            android:background="@color/colorBar"
             android:layout_height="wrap_content"
             android:onClick="expandWeatherAsync"
             android:textColor="@color/appButtonTextColor"

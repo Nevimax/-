@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,14 +53,14 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.deleteButtonfrag:
                 emp();
-
                 appDatabase.employeeDao().delete(employee);
-
+                Toast.makeText(getApplicationContext(),"Удалено", Toast.LENGTH_SHORT).show();
                 finish();
                 break;
             case R.id.saveButtonfrag:
                 emp();
                 appDatabase.employeeDao().update(employee);
+                Toast.makeText(getApplicationContext(),"Сохранено", Toast.LENGTH_SHORT).show();
                 finish();
                 break;
         }
