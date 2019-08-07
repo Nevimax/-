@@ -23,32 +23,32 @@
 
         <EditText
             android:id="@+id/zagolEd"
-            android:maxLength="15"
-            android:layout_marginTop="80dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
             android:layout_weight="9"
             android:background="@color/colortext"
             android:gravity="top"
             android:hint="@string/zagolo"
+            android:inputType="textCapSentences"
+            android:maxLength="15"
             android:textColor="@color/colorblack"
             android:textSize="40dp" />
 
-                <EditText
-                    android:id="@+id/textEd"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@color/colortext"
-                    android:hint="@string/text"
-                    android:gravity="top"
-                    android:scrollbars="vertical"
-                    android:scrollHorizontally="true"
-                    android:textColor="@color/colorblack"
-                    android:textSize="20dp"
-                    />
+        <EditText
+            android:id="@+id/textEd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="2"
+            android:background="@color/colortext"
+            android:gravity="top"
+            android:hint="@string/text"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="true"
+            android:textColor="@color/colorblack"
+            android:textSize="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,9 +64,9 @@
             android:layout_height="match_parent"
             android:layout_weight="14"
             android:background="@color/colorBar"
-            android:textColor="@color/colorblack"
             android:gravity="center_vertical"
             android:text="  NMyNotes"
+            android:textColor="@color/colorblack"
             android:textSize="30dp" />
 
         <TextView
@@ -75,16 +75,17 @@
             android:layout_height="80dp"
             android:layout_weight="6"
             android:gravity="center_vertical"
-            android:textColor="@color/colorblack"
-            android:hint="time/date" />
+            android:hint="time/date"
+            android:textColor="@color/colorblack" />
+
         <ImageButton
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:background="@color/colorBar"
             android:gravity="center_vertical"
+            android:onClick="onClick"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_save" />

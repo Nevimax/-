@@ -45,7 +45,6 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
         timeEd.setText(messTim);
         appDatabase = AppDatabase.App.getInstance(this);
 
-
     }
 
     @Override
