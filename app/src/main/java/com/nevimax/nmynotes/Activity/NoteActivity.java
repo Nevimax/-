@@ -3,6 +3,8 @@ package com.nevimax.nmynotes.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -57,11 +59,12 @@ public class NoteActivity extends AppCompatActivity {
 
                 employee = new Employee(zagSt, textSt, dateSt);
 //                if(zagSt.equals(null)){}
-                appDatabase.employeeDao().insert(employee);
+
                 Log.d("NLog", "insert");
                 if (zagSt.equals(" ")||zagSt.equals("")) {
                     Toast.makeText(getApplicationContext(), "Ввидите название", Toast.LENGTH_SHORT).show();
                 } else {
+                    appDatabase.employeeDao().insert(employee);
                     Toast.makeText(getApplicationContext(), "Добавлено", Toast.LENGTH_SHORT).show();
                     finish();
                 }

@@ -30,7 +30,6 @@
             android:gravity="center_vertical"
             android:text="  NMyNotes"
             android:textColor="@color/colorblack"
-            android:onClick="onClick"
             android:textSize="30dp"
             />
 
@@ -44,6 +43,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_add" />
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/buttonSetting"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/colorBar"-->
+            <!--android:onClick="onClick"-->
+            <!--app:srcCompat="@android:drawable/ic_menu_more" />-->
     </LinearLayout>
     <TextView
         android:layout_width="20dp"

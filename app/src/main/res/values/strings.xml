@@ -15,5 +15,6 @@
     <string name="dialogUpdate">Изменить</string>
     <string name="dialogName"></string>
     <string name="toastAdd">Добавлено</string>
+    <string name="action_settings">Настройки</string>
 
 </resources>
