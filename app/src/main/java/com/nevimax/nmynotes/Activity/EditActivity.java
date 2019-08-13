@@ -14,12 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.nevimax.nmynotes.BD.AppDatabase;
 import com.nevimax.nmynotes.BD.Employee;
 import com.nevimax.nmynotes.BD.EmployeeDao;
+import com.nevimax.nmynotes.Main;
 import com.nevimax.nmynotes.R;
 
 public class EditActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppDatabase appDatabase;
-    Employee employee;
+    Employee employee, employee1;
     EditText zagEd, textEd;
     TextView timeEd;
     String zag, text, time;
@@ -42,7 +43,7 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
         timeEd = findViewById(R.id.dateTimeViewfrag);
         zagEd.setText(messZag);
         textEd.setText(messTex);
-        timeEd.setText(messTim);
+        timeEd.setText(Main.time());
         appDatabase = AppDatabase.App.getInstance(this);
 
     }
@@ -76,6 +77,7 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
         time = timeEd.getText().toString();
         employee = new Employee(zag, text, time);
         employee.setId(i);
+
 
     }
 }

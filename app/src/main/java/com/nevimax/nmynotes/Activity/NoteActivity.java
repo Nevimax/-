@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.nevimax.nmynotes.BD.AppDatabase;
 import com.nevimax.nmynotes.BD.Employee;
+import com.nevimax.nmynotes.Main;
 import com.nevimax.nmynotes.R;
 
 import java.text.DateFormat;
@@ -75,15 +76,8 @@ public class NoteActivity extends AppCompatActivity {
 
     }
     public void time(){
-        //time
-        Date time1 = new Date();
-        DateFormat timeFormat = new SimpleDateFormat("HH.mm ");
-        String timeText = timeFormat.format(time1);
-        //date
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        String dateText = dateFormat.format(time1);
         time = findViewById(R.id.dateTimeView);
-        time.setText(timeText + "|| " + dateText);
+        time.setText(Main.time());
     }
 
 }
